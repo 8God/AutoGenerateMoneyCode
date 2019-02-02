@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">打码神器</string>
+
+    <string name="alipay_generate_service_desc">点击开启支付宝自动生成收款码功能</string>
+    <string name="wechat_generate_service_desc">点击开启微信自动生成收款码功能</string>
+
+</resources>

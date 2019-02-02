@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context="me.twobirds.pay.autogeneratemoneycode.activity.MainActivity">
+
+    <TextView
+        android:id="@+id/money_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="金额范围" />
+
+    <EditText
+        android:id="@+id/money_range_start"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="金额下限"
+        android:inputType="number"
+        android:text="1"
+        app:layout_constraintTop_toBottomOf="@+id/money_range" />
+
+    <TextView
+        android:id="@+id/money_range_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="center_vertical"
+        android:text="_"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@+id/money_range_start"
+        app:layout_constraintTop_toBottomOf="@+id/money_range" />
+
+    <EditText
+        android:id="@+id/money_range_end"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="金额上限"
+        android:inputType="number"
+        android:text="300"
+        app:layout_constraintLeft_toRightOf="@+id/money_range_divider"
+        app:layout_constraintTop_toBottomOf="@+id/money_range" />
+
+    <TextView
+        android:id="@+id/money_gap_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="金额间隔"
+        app:layout_constraintTop_toBottomOf="@+id/money_range_end" />
+
+    <EditText
+        android:id="@+id/money_gap"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="金额间隔"
+        android:inputType="number"
+        android:text="1"
+        app:layout_constraintTop_toBottomOf="@+id/money_gap_title" />
+
+
+    <TextView
+        android:id="@+id/money_gap_floating_count_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="金额间隔浮动个数"
+        app:layout_constraintTop_toBottomOf="@+id/money_gap" />
+
+    <EditText
+        android:id="@+id/money_gap_floating_count"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="例值为2，则10块钱生成9.98、9.99"
+        android:inputType="number"
+        android:text="5"
+        app:layout_constraintTop_toBottomOf="@+id/money_gap_floating_count_title" />
+
+    <LinearLayout
+        android:id="@+id/ll_gap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/money_gap_floating_count">
+
+        <Button
+            android:id="@+id/btn_gap_1"
+            android:layout_width="0dp"
+            android:text="1-300"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"/>
+
+        <Button
+            android:id="@+id/btn_gap_300"
+            android:layout_width="0dp"
+            android:text="300-1000"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"/>
+
+        <Button
+            android:id="@+id/btn_gap_1000"
+            android:layout_width="0dp"
+            android:text="1000-5000"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_generate_alipay_qrcode"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="生成支付宝收款码"
+        app:layout_constraintTop_toBottomOf="@+id/ll_gap" />
+
+    <Button
+        android:id="@+id/btn_convenient_function"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="快捷功能"
+        app:layout_constraintTop_toBottomOf="@+id/btn_generate_alipay_qrcode" />
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_generate_wechat_qrcode"-->
+    <!--style="@style/Base.Widget.AppCompat.Button.Colored"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="18dp"-->
+    <!--android:text="生成微信收款码"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/btn_generate_alipay_qrcode" />-->
+
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_get_qrcode_url"-->
+        <!--style="@style/Base.Widget.AppCompat.Button.Colored"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="18dp"-->
+        <!--android:text="提取二维码链接"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/btn_generate_alipay_qrcode" />-->
+
+</android.support.constraint.ConstraintLayout>

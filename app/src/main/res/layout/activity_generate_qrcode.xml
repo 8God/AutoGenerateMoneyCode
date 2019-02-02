@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="1、打开支付宝、登录账号、修改头像"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        android:text="2、打开[收钱]页面，点击下方按钮"/>
+
+    <Button
+        android:id="@+id/btn_generate_qrcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="开始 1-5000元 二维码生成"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    <Button
+        android:id="@+id/btn_continue_generate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="继续打码"
+        android:visibility="gone"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        android:text="3、生成完后打开文件管理器，在SD卡新建一个以支付宝账号命名的文件夹，剪切2460张二维码到该文件夹"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        android:text="4、点击下方按钮，选择该文件夹任意一张二维码，等待截图完成"/>
+
+    <Button
+        android:id="@+id/btn_zip_qrcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="重命名、截图 1-5000元 二维码"
+        android:layout_marginTop="8dp"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        android:text="注意：最后任意抽几张二维码，扫码检查支付金额跟二维码文件名是否对得上。"/>
+
+</LinearLayout>
